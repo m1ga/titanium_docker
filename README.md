@@ -6,9 +6,11 @@
 
 * download Dockerfile
 * docker build . -t titanium-test
-* docker run -t -i titanium-test bash
+* docker run -t -v ~/localFiles:/root/files -i titanium-test bash
 
-It will open a terminal where you can run the Titanum CLI and build Android apps.
+Change `localFiles` to your app folder.
+
+It will open a terminal where you can run the Titanum CLI and build Android apps. You can now go into your app folder and run `ti build -p android -b`
 
 
 ## Todo

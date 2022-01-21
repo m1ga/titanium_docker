@@ -52,5 +52,6 @@ RUN ti sdk install latest
 
 # Configure Android SDK/NDK path in Titanium CLI
 RUN titanium config android.sdk $ANDROID_HOME
+RUN mkdir /root/files
 
-WORKDIR /root/
+WORKDIR /root/files
