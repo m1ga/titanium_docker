@@ -1,4 +1,4 @@
-# Appcelerator Titanium Dockerfile
+# Titanium SDK Dockerfile
 
 > Inspired by the repos of https://github.com/HazemKhaled/Titanium-Docker and https://github.com/MartinDevillers/ti.build
 
