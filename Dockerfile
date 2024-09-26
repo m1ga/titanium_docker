@@ -1,18 +1,18 @@
 # Appcelerator Titanium Dockerfile
 
 
-FROM ubuntu:18.04
+FROM ubuntu:24.04
 MAINTAINER Michael Gangolf <miga@migaweb.de>
 
 # Install packages
 RUN apt-get update
 
-# Install OpenJDK-11
-RUN apt-get install -y openjdk-11-jdk-headless
+# Install OpenJDK
+RUN apt-get install -y openjdk-17-jdk-headless
 RUN apt-get clean;
 
 # Set Java Home to JDK6
-ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64/
+ENV JAVA_HOME /usr/lib/jvm/java-17-openjdk-amd64/
 RUN export JAVA_HOME
 
 # Install packages
@@ -22,9 +22,8 @@ RUN \
 
 # Nodejs
 
-RUN curl -sL https://deb.nodesource.com/setup_14.x  | bash -
+RUN curl -sL https://deb.nodesource.com/setup_20.x  | bash -
 RUN apt-get -y install nodejs
-RUN npm install
 
 # Android SDK
 ENV SDK_URL="https://dl.google.com/android/repository/commandlinetools-linux-7583922_latest.zip" \
@@ -46,7 +45,7 @@ RUN yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses
 
 
 # Install Titanium SDK and Alloy
-RUN npm install -g titanium alloy appcelerator
+RUN npm install -g titanium alloy
 RUN ti sdk install latest
 
 
