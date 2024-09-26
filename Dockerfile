@@ -28,8 +28,8 @@ RUN apt-get -y install nodejs
 # Android SDK
 ENV SDK_URL="https://dl.google.com/android/repository/commandlinetools-linux-7583922_latest.zip" \
     ANDROID_HOME="/usr/local/android-sdk" \
-    ANDROID_VERSION=29 \
-    ANDROID_BUILD_TOOLS_VERSION=28.0.3
+    ANDROID_VERSION=33 \
+    ANDROID_BUILD_TOOLS_VERSION=30.0.2
 
 RUN mkdir "$ANDROID_HOME" .android \
     && cd "$ANDROID_HOME" \
